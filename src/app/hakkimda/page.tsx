@@ -5,10 +5,84 @@ import { Target, Music, Camera, Mountain, Leaf, Phone, Mail, ExternalLink, Info 
 import { useState } from 'react'
 import Layout from '@/components/Layout'
 
+interface Experience {
+  period: string
+  title: string
+  company: string
+  link?: string
+  description: string
+  technologies: string[]
+}
+
+interface Education {
+  year: string
+  school: string
+  degree: string
+  link: string
+}
+
+interface Activity {
+  year: string
+  title: string
+  organization: string
+  description: string
+  detailedDescription: string
+  images: string[]
+}
+
+interface Reference {
+  name: string
+  title?: string
+  phone?: string
+  email?: string
+}
+
 export default function Home() {
   const [activeTooltip, setActiveTooltip] = useState<number | null>(null)
 
-  const education = [
+  const experience: Experience[] = [
+    {
+      period: "Haziran 2025 - Eylül 2025",
+      title: "Genç Yetenek Programı - Yapay Zeka Uzmanı",
+      company: "Quick and Quality",
+      description: "Yapay zeka ve makine öğrenmesi alanında kapsamlı eğitim ve proje geliştirme programı. Makine öğrenmesi algoritmaları, doğal dil işleme ve derin öğrenme uygulamaları.",
+      technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Scrum"]
+    },
+    {
+      period: "Haziran 2025 - Ağustos 2025",
+      title: "Proje Yönetimi Stajyeri",
+      company: "SCA Social",
+      link: "https://scasocial.com/",
+      description: "Online proje yönetimi staj programı kapsamında kurumsal proje yönetimi süreçlerini deneyimleme. Proje planlama, takip ve koordinasyon süreçlerinde aktif rol alma.",
+      technologies: ["Proje Yönetimi", "Takım Çalışması", "İletişim"]
+    },
+    {
+      period: "Haziran 2025 - Temmuz 2025",
+      title: "Bursiyer, Yapay Zeka Uygulamaları Geliştirme Bölümü",
+      company: "Yapay Zeka ve Teknoloji Akademisi",
+      link: "https://yapayzekaveteknolojiakademisi.com/",
+      description: "Yapay zeka ve teknolojileri alanında derinlemesine bilgi edinme ve uygulama geliştirme odaklı burs programı. (Google Türkiye, Girişimcilik Vakfı, T3 Girişim Merkezi iş birliği)",
+      technologies: ["AI", "Machine Learning", "Proje Geliştirme"]
+    },
+    {
+      period: "Yaz 2024",
+      title: "Yazılım ve Donanım Stajyeri",
+      company: "GOTEC-C IT",
+      link: "https://gotec-group.com/en/",
+      description: "Kotlin ile Android mobil uygulama geliştirme. Network altyapısı ve protokolleri üzerine çalışmalar. Agile metodolojileri ile proje yönetimi deneyimi.",
+      technologies: ["Kotlin", "Android", "Network", "Agile", "Donanım-Yazılım"]
+    },
+    {
+      period: "Yaz 2023",
+      title: "Yazılım Stajyeri",
+      company: "Tersan Tersanesi - Bilgi Teknolojileri",
+      link: "https://tersanshipyard.com/tr",
+      description: "JavaFX ile cihaz bilgi yönetim sistemi geliştirme. Nesne Yönelimli Programlama (OOP) prensiplerinin uygulanması. Endüstriyel yazılım geliştirme süreçleri deneyimi.",
+      technologies: ["JavaFX", "OOP", "Java", "Endüstriyel Yazılım"]
+    }
+  ]
+
+  const education: Education[] = [
     {
       year: "2020 – 2025",
       school: "Yalova Üniversitesi",
@@ -29,7 +103,7 @@ export default function Home() {
     }
   ]
 
-  const activities = [
+  const activities: Activity[] = [
     {
       year: "2024-2025",
       title: "Tarımda Genç Girişimci Kuluçka Programı",
@@ -55,7 +129,7 @@ export default function Home() {
     { name: "Doğa Yürüyüşü Yapmak", icon: Mountain }
   ]
 
-  const references = [
+  const references: Reference[] = [
     {
       name: "Dr. İlker KARBUZ",
       title: "Kollektif İş Sağlığı ve Güvenliği",
@@ -77,10 +151,6 @@ export default function Home() {
       phone: "+90 532 643 0024"
     }
   ]
-
-  const handleTooltipToggle = (index: number) => {
-    setActiveTooltip(activeTooltip === index ? null : index)
-  }
 
   return (
     <Layout>
@@ -291,6 +361,69 @@ export default function Home() {
                       <p className="text-gray-400">
                         {item.degree}
                       </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Experience Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="bg-slate-800/90 backdrop-blur-md border-2 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
+          >
+            <h2 className="text-2xl font-bold text-emerald-400 text-center mb-8 font-mono">
+              DENEYİM & PROGRAMLAR
+            </h2>
+            
+            <div className="space-y-6">
+              {experience.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 + index * 0.1, duration: 0.6 }}
+                  className="bg-emerald-500/10 border-l-4 border-emerald-500 rounded-lg p-6 hover:bg-emerald-500/20 transition-all duration-300"
+                >
+                  <div className="text-emerald-400 font-bold text-sm mb-2 font-mono">
+                    {item.period}
+                  </div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <h3 className="text-gray-200 text-xl font-bold mb-2 flex items-center gap-2">
+                        {item.title}
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                          >
+                            <ExternalLink className="w-5 h-5" />
+                          </a>
+                        )}
+                      </h3>
+                      <div className="text-emerald-300 font-medium mb-3">
+                        {item.company}
+                      </div>
+                      <p className="text-gray-400 leading-relaxed mb-3">
+                        {item.description}
+                      </p>
+                      {item.technologies && (
+                        <div className="flex flex-wrap gap-2">
+                          {item.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-mono border border-emerald-500/30"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>

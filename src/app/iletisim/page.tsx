@@ -4,8 +4,19 @@ import { Mail, Download, ExternalLink, Phone, MapPin, Github, Linkedin } from 'l
 import Layout from '@/components/Layout'
 
 export default function Contact() {
+  // Google Drive dosyasını direkt indirmek için URL'i düzenle
   const handleCVDownload = () => {
-    window.open('https://drive.google.com/uc?export=download&id=1w_41paP5C3PaWmGmWWSNqlT2OBR96YN0', '_blank')
+    // Google Drive share linkini direct download linkine çevir
+    const fileId = '1uqJ1MYf7V9dc-xiMcbopajbU3-SZLI57'
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`
+    
+    // Yeni sekmede açmak yerine direkt indirme
+    const link = document.createElement('a')
+    link.href = downloadUrl
+    link.download = 'ElifNur_Oksuz_CV.pdf' // İndirilen dosyanın adı
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   const handleEmailSend = () => {
@@ -208,5 +219,3 @@ export default function Contact() {
     </Layout>
   )
 }
-
-
