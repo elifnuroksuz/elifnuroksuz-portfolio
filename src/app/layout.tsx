@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Elif Nur Öksüz | Bilgisayar Mühendisi',
-  description: 'Yapay zeka, mobil uygulama geliştirme ve proje yönetimi alanlarında uzmanlaşan bilgisayar mühendisi.',
+  description: 'Bilgisayar Mühendisi.',
   keywords: [
     'Elif Nur Öksüz',
     'bilgisayar mühendisi',
