@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter'
@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elif Nur Öksüz | Bilgisayar Mühendisi'
+    title: 'Elif Nur Öksüz | Bilgisayar Mühendisi',
+    description: 'Bilgisayar Mühendisi', // Bu satır eksikti!
   },
   robots: {
     index: true,
