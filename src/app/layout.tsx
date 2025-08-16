@@ -41,8 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elif Nur Öksüz | Bilgisayar Mühendisi',
-    description: 'Yapay zeka ve mobil uygulama geliştirme uzmanı',
+    title: 'Elif Nur Öksüz | Bilgisayar Mühendisi'
   },
   robots: {
     index: true,
