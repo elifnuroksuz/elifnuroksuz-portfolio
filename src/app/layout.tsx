@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Elif Nur Öksüz | Bilgisayar Mühendisi',
-    description: 'Yapay zeka ve mobil uygulama geliştirme uzmanı',
+    description: 'Bilgisayar Mühendisi',
     url: 'https://elifnuroksuz.vercel.app',
     siteName: 'Elif Nur Öksüz Portfolio',
     locale: 'tr_TR',
