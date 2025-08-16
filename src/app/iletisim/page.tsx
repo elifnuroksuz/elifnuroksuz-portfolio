@@ -31,13 +31,13 @@ export default function Contact() {
       </div>
 
       <div className="relative z-10 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
+        <div className="max-w-6xl mx-auto px-6 py-8 space-y-8">
           
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-slate-800/90 backdrop-blur-md border-2 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
+            className="bg-slate-800/90 backdrop-blur-md border-4 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
           >
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-emerald-400 font-mono mb-4">
@@ -57,7 +57,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="bg-slate-800/90 backdrop-blur-md border-2 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
+            className="bg-slate-800/90 backdrop-blur-md border-4 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
           >
             <motion.button
               onClick={handleCVDownload}
@@ -74,7 +74,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="bg-slate-800/90 backdrop-blur-md border-2 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
+            className="bg-slate-800/90 backdrop-blur-md border-4 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
           >
             <h2 className="text-2xl font-bold text-emerald-400 mb-6 font-mono text-center">
               İLETİŞİM KANALLARI
@@ -84,7 +84,7 @@ export default function Contact() {
               <motion.a
                 href="mailto:elifnuroksuz4@gmail.com"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group cursor-pointer"
+                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border-2 border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group cursor-pointer"
               >
                 <Mail className="w-6 h-6 text-emerald-400 group-hover:text-emerald-300" />
                 <div>
@@ -100,7 +100,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group cursor-pointer"
+                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border-2 border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group cursor-pointer"
               >
                 <Linkedin className="w-6 h-6 text-emerald-400 group-hover:text-emerald-300" />
                 <div>
@@ -116,7 +116,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group cursor-pointer"
+                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border-2 border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group cursor-pointer"
               >
                 <Github className="w-6 h-6 text-emerald-400 group-hover:text-emerald-300" />
                 <div>
@@ -129,7 +129,7 @@ export default function Contact() {
 
               <motion.div 
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300"
+                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border-2 border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300"
               >
                 <Phone className="w-6 h-6 text-emerald-400" />
                 <div>
@@ -141,7 +141,7 @@ export default function Contact() {
 
               <motion.div 
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300"
+                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border-2 border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300"
               >
                 <MapPin className="w-6 h-6 text-emerald-400" />
                 <div>
@@ -155,7 +155,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group"
+                className="flex items-center gap-3 p-4 bg-emerald-500/10 rounded-lg border-2 border-emerald-500/30 hover:bg-emerald-500/20 transition-all duration-300 group"
               >
                 <div className="w-6 h-6 text-emerald-400 font-bold text-xl group-hover:text-emerald-300">M</div>
                 <div>
@@ -171,7 +171,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="bg-slate-800/90 backdrop-blur-md border-2 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
+            className="bg-slate-800/90 backdrop-blur-md border-4 border-emerald-500 rounded-xl p-8 shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:border-emerald-400 transition-all duration-300"
           >
             <h2 className="text-2xl font-bold text-emerald-400 mb-6 font-mono text-center">
               BİRLİKTE ÇALIŞMAYA HAZIR MISINIZ?
@@ -208,3 +208,5 @@ export default function Contact() {
     </Layout>
   )
 }
+
+
